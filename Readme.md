@@ -17,8 +17,6 @@ Support for passing the parameter named YOUR_DIRECTORY_PATH_TO_RABBITMQ_SBIN all
 
 The data will show in CopperEgg as Custom Objects.
 
-If waiting_messages > 0 then there are messages needing processed.
-
-If waiting_messages = 0 then there are no messages to be processed.
-
-If waiting_messages < 0 then there are either no queues or there was a communications problem getting the queue statistics.
+1. If waiting_messages > 0 then there are messages needing processed.
+2. If waiting_messages = 0 then there are no messages to be processed.
+3. If waiting_messages < 0 then there are either no queues or there was a communications problem getting the queue statistics.
