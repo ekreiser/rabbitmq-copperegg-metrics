@@ -1,4 +1,4 @@
-This script is sending RabbitMQ queue sizes (sum of all ready and unacknowledged messages in all queues) and the used memory (in Bytes) of all queues to [CopperEgg](http://www.copperegg.com/).
+This script is sending RabbitMQ queue sizes (sum of all ready and unacknowledged messages in all queues) to [CopperEgg](http://www.copperegg.com/). 
 
 1. Make sure that you have `rabbitmqctl` installed.
 2. Run `bundle install`
@@ -12,3 +12,9 @@ It might be that you have to append a `:U` to the end of your API KEY. The Coppe
 Support for passing the parameter named YOUR_RABBITMQ_NODE_NAME allows for the scenario of running multiple RabbitMQ server instances on a single machine.
 
 Support for passing the parameter named YOUR_DIRECTORY_PATH_TO_RABBITMQ_SBIN allows for installing RabbitMQ into different directory structures - and not having to edit the ruby script.
+
+The data will show in CopperEgg as Custom Objects. 
+----------------------------------------------------
+If waiting_messages > 0 then there are messages needing processed.
+If waiting_messages = 0 then there are no messages to be processed.
+If waiting_messages < 0 then there are either no queues or there was a communications problem getting the queue statistics.
